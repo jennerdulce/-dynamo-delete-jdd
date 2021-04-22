@@ -1,1 +1,1 @@
-# -dynamo-delete-jdd
+# dynamo-delete-jdd

@@ -4,10 +4,9 @@ const clientsModel = require('./schema.js');
 
 
 exports.handler = async (event) => {
-  console.log('EVENT', event.body)
+  console.log('EVENT', event)
   try {
-    const body = JSON.parse(event.body)
-    let id = body.id;
+    const id = event.queryStringParameters.id
     await clientsModel.delete({"id": id})
     const strigifiedId = JSON.stringify(id)
     return {
